@@ -23,6 +23,10 @@ header a {
     font-size: 18px;
 }
 /* main */
+body {
+    width: 100%;
+    background-color: rgb(141, 177, 243);
+}
 main {
     text-align: center;
     width: 70%;

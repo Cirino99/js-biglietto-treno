@@ -19,8 +19,8 @@ const eta = parseInt(prompt('Quanti anni ha il passeggero?'));
 console.log('età del passeggero',eta);
 //calcolo il prezzo del biglietto
 let prezzo;
-if (eta>=18 && eta<=65){
-    prezzo = km * prezzoKm;
+if (eta>65){
+    prezzo = km * prezzoKmAnziani;
     prezzo = prezzo.toFixed(2);
     console.log('Il costo del biglietto è',prezzo);
 } else if (eta<18){
@@ -28,7 +28,7 @@ if (eta>=18 && eta<=65){
     prezzo = prezzo.toFixed(2);
     console.log('Il costo del biglietto è',prezzo);
 } else {
-    prezzo = km * prezzoKmAnziani;
+    prezzo = km * prezzoKm;
     prezzo = prezzo.toFixed(2);
     console.log('Il costo del biglietto è',prezzo);
 }
