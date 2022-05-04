@@ -23,12 +23,15 @@ if (eta>=18 && eta<=65){
     prezzo = km * prezzoKm;
     prezzo = prezzo.toFixed(2);
     console.log('Il costo del biglietto è',prezzo);
+    document.getElementById('prezzo').innerHTML = `Il costo del tuo fantastico biglietto è di soli ${prezzo}€`;
 } else if (eta<18){
     prezzo = km * prezzoKmMinorenni;
     prezzo = prezzo.toFixed(2);
     console.log('Il costo del biglietto è',prezzo);
+    document.getElementById('prezzo').innerHTML = `Il costo del tuo fantastico biglietto è di soli ${prezzo}€`;
 } else {
     prezzo = km * prezzoKmAnziani;
     prezzo = prezzo.toFixed(2);
     console.log('Il costo del biglietto è',prezzo);
+    document.getElementById('prezzo').innerHTML = `Il costo del tuo fantastico biglietto è di soli ${prezzo}€`;
 }
