@@ -21,16 +21,14 @@ console.log('età del passeggero',eta);
 let prezzo;
 if (eta>65){
     prezzo = km * prezzoKmAnziani;
-    prezzo = prezzo.toFixed(2);
     console.log('Il costo del biglietto è',prezzo);
 } else if (eta<18){
     prezzo = km * prezzoKmMinorenni;
-    prezzo = prezzo.toFixed(2);
     console.log('Il costo del biglietto è',prezzo);
 } else {
     prezzo = km * prezzoKm;
-    prezzo = prezzo.toFixed(2);
     console.log('Il costo del biglietto è',prezzo);
 }
 //comunico il prezzo all'utente
+prezzo = prezzo.toFixed(2);
 document.getElementById('prezzo').innerHTML = `Il costo del tuo fantastico biglietto è di soli ${prezzo}€`;
