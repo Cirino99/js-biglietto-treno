@@ -5,12 +5,6 @@
 //prezzo al km
 const prezzoKm = 0.21;
 console.log('prezzo al km',prezzoKm);
-//prezzo al km per i minorenni
-const prezzoKmMinorenni = prezzoKm * 80 / 100;
-console.log('prezzo al km per i minorenni',prezzoKmMinorenni);
-//prezzo al km per gli over 65
-const prezzoKmAnziani = prezzoKm * 60 / 100;
-console.log('prezzo al km per gli over 65',prezzoKmAnziani);
 //chiedo all'utente quanti km deve percorrere
 const km = parseInt(prompt('Quanti km devi percorre col treno?'));
 console.log('km da percorrere',km);
@@ -20,9 +14,15 @@ console.log('età del passeggero',eta);
 //calcolo il prezzo del biglietto
 let prezzo;
 if (eta>65){
+    //prezzo al km per gli over 65
+    const prezzoKmAnziani = prezzoKm * 60 / 100;
+    console.log('prezzo al km per gli over 65',prezzoKmAnziani);
     prezzo = km * prezzoKmAnziani;
     console.log('Il costo del biglietto è',prezzo);
 } else if (eta<18){
+    //prezzo al km per i minorenni
+    const prezzoKmMinorenni = prezzoKm * 80 / 100;
+    console.log('prezzo al km per i minorenni',prezzoKmMinorenni);
     prezzo = km * prezzoKmMinorenni;
     console.log('Il costo del biglietto è',prezzo);
 } else {
