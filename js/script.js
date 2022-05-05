@@ -6,10 +6,10 @@
 const prezzoKm = 0.21;
 console.log('prezzo al km',prezzoKm);
 //prezzo al km per i minorenni
-const prezzoKmMinorenni = 0.21 * 80 / 100;
+const prezzoKmMinorenni = prezzoKm * 80 / 100;
 console.log('prezzo al km per i minorenni',prezzoKmMinorenni);
 //prezzo al km per gli over 65
-const prezzoKmAnziani = 0.21 * 60 / 100;
+const prezzoKmAnziani = prezzoKm * 60 / 100;
 console.log('prezzo al km per gli over 65',prezzoKmAnziani);
 //chiedo all'utente quanti km deve percorrere
 const km = parseInt(prompt('Quanti km devi percorre col treno?'));
