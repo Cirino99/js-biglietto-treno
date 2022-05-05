@@ -12,23 +12,19 @@ console.log('km da percorrere',km);
 const eta = parseInt(prompt('Quanti anni ha il passeggero?'));
 console.log('età del passeggero',eta);
 //calcolo il prezzo del biglietto
-let prezzo;
+let prezzo = km * prezzoKm;
 if (eta>65){
     //prezzo al km per gli over 65
     const prezzoKmAnziani = prezzoKm * 60 / 100;
     console.log('prezzo al km per gli over 65',prezzoKmAnziani);
     prezzo = km * prezzoKmAnziani;
-    console.log('Il costo del biglietto è',prezzo);
 } else if (eta<18){
     //prezzo al km per i minorenni
     const prezzoKmMinorenni = prezzoKm * 80 / 100;
     console.log('prezzo al km per i minorenni',prezzoKmMinorenni);
     prezzo = km * prezzoKmMinorenni;
-    console.log('Il costo del biglietto è',prezzo);
-} else {
-    prezzo = km * prezzoKm;
-    console.log('Il costo del biglietto è',prezzo);
 }
 //comunico il prezzo all'utente
+console.log('Il costo del biglietto è',prezzo);
 prezzo = prezzo.toFixed(2);
 document.getElementById('prezzo').innerHTML = `Il costo del tuo fantastico biglietto è di soli ${prezzo}€`;
